@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "myTodo.css"/>
+</head>
+<body style="width:100vw;">
+    <nav class="nav-bar">
+        <button class="section" onclick="displayMainPage()">
+        <img src = "https://static.vecteezy.com/system/resources/thumbnails/006/549/765/small/to-do-list-hand-drawn-doodle-icon-free-vector.jpg" class="icon"/>
+    </button>
+        <ul class = "options-list">
+        <button class="section" id = "myTodoBut"  onclick="displayMytodoSection()">
+            <li> My Todos</li>
+        </button >
+        <button class="section" id = "completedBut" onclick="displayCompletedSection()">
+            <li>Completed</li>
+        </button>
+        <button class="section" id = "inProgressBut" onclick="displayinProgressSection()">
+            <li>In progress</li>
+        </button>
+        </ul>
+    </nav>
+    <div class = "mainsection" id="mainpage">
+        <h1 class="main-heading">myTodos</h1>
+        <input type = "text" placeholder="Enter Your todos" class="input-element" id="inputElement"/>
+        <p class = "para-element">To be complete at </p>
+        <input type="date" placeholder="Should be completed at" class="input-element" id="dateElement"/>
+        <div>
+        <button class="enter-button" onclick="enterTodo()" style="margin-left: -230px;margin-right: 30px;">Enter</button>
+        <button class="enter-button" onclick="saveData()">Save</button>
+        </div>
+
+    </div>
+    <div id = "myTodos" style="background-color: rgb(233, 235, 232);">
+        <h1 id = "totalTasks">Total tasks: 0</h1>
+        <ul id = userTodoList></ul>
+    </div>
+    <div id = "completed" style="padding-top: 50px;padding-left: 50px;padding-right: 30px; background-color: rgb(231, 252, 253);height: 80vh;">
+        <h1 id = "totalCompletedTasks" style="text-align:end;">Completed Tasks: 0</h1>
+        <ul id = "userCompletedTaskslist"></ul>
+    </div>
+    <div id = "inProgress" style="padding-top: 50px;padding-left: 50px;padding-right: 30px; background-color: rgb(217, 240, 87);height: 80vh;">
+        <h1 id = "inProgressTasks" style="text-align:end;"> In Progress Tasks: 0</h1>
+        <ul id = "inProgressTasksList"></ul>
+    </div>
+    <script type = "text/javascript" src = "myTodo.js"></script>
+</body>
+</html>
