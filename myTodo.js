@@ -248,6 +248,16 @@ function appendCompletedTodo(eachTodo){
     para.style.color = "#f00e4a"
     para.style.fontFamily = "Roboto"
     todo.appendChild(para)
+
+    let para1 = document.createElement("p")
+    para1.textContent = "Completed"
+    para1.style.alignSelf = "flex-end"
+    para1.style.color = "Green"
+    para1.style.fontWeight = "700"
+    para1.style.fontSize = "28px"
+    para1.style.marginBottom = "10px"
+    todo.appendChild(para1)
+
     let deleteButton = document.createElement("button")
     deleteButton.textContent = "Delete"
     deleteButton.classList.add("completedbutton")
@@ -279,6 +289,13 @@ function  appendInprogessTodo(eachTodo){
     para.style.color = "#f00e4a"
     para.style.fontFamily = "Roboto"
     todo.appendChild(para)
+
+    let date = document.createElement("p")
+    date.textContent = "have to complete by: " + eachTodo["date"]
+    date.style.alignSelf = "flex-end"
+    date.style.color = "#5a07a8"
+    date.style.marginBottom = "10px"
+    todo.appendChild(date)
 
     let completedButton = document.createElement("button")
     completedButton.classList.add("completedbutton")
